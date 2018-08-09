@@ -1,0 +1,4 @@
+org/apache/camel/example/ftp/MyFtpClient.class
+org/apache/camel/example/ftp/MyFtpClientRouteBuilder.class
+org/apache/camel/example/ftp/MyFtpServerRouteBuilder.class
+org/apache/camel/example/ftp/MyFtpServer.class
