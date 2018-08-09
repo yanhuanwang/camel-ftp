@@ -33,7 +33,7 @@ public class MyFtpServerRouteBuilder extends RouteBuilder {
         // lets shutdown faster in case of in-flight messages stack up
         getContext().getShutdownStrategy().setTimeout(10);
 
-        from("ftp://10.209.57.132:21/?fileName=a.txt&autoCreate=false&username=bob&password=123&passiveMode=true&binary=true&resumeDownload=true&localWorkDirectory=target/ftp-work&transferLoggingLevel=INFO&transferLoggingIntervalSeconds=1&transferLoggingVerbose=false")
+        from("ftp://10.209.57.132:21/?fileName=a.txt&autoCreate=false&username=bob&password=123&passiveMode=true&binary=true&resumeDownload=true&localWorkDirectory=target/ftp-work&transferLoggingLevel=INFO&transferLoggingIntervalSeconds=1&transferLoggingVerbose=false&delay=5s&noop=true")
             .to("file:target/download")
             .log("Downloaded file ${file:name} complete.");
 
